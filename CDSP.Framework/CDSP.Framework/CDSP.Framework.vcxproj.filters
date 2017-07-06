@@ -36,6 +36,9 @@
     <ClInclude Include="BaseFrame.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
+    <ClInclude Include="IFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -49,6 +52,9 @@
     </ClCompile>
     <ClCompile Include="BaseFrame.cpp">
       <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="IFrame.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

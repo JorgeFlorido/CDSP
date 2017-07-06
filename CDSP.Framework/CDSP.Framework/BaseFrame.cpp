@@ -35,6 +35,15 @@ BaseFrame::WindowIterator BaseFrame::End() {
 	return this->samples.end();
 }
 
+void BaseFrame::Push(double v) {
+	this->samples.push_back(v);
+}
+
+void BaseFrame::Pop() {
+	this->samples.pop_back();
+}
+
+
 // Init with zeros
 int BaseFrame::Init(size_t size) {
 	try
@@ -52,3 +61,5 @@ int BaseFrame::Init(size_t size) {
 		return -1;
 	}
 }
+
+

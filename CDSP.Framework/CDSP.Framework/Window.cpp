@@ -3,6 +3,14 @@
 
 #define PI 3.14159265358979323846
 
+double BaseFrame::Get(size_t p) {
+	return this->samples.at(p);
+}
+
+void BaseFrame::Set(size_t p, double value) {
+	this->samples.at(p) = value;
+}
+
 int Window::BlackmanHarris(size_t size) {
 
 	const float a0 = 0.35875f;

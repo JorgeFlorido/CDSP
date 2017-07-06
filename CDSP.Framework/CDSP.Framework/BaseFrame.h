@@ -13,7 +13,7 @@ public:
 	BaseFrame(const BaseFrame& copy);
 	~BaseFrame();
 
-	typedef vector<float> Container;
+	typedef vector<double> Container;
 	typedef Container::size_type WindowSizeType;
 	typedef Container::iterator WindowIterator;
 	typedef Container::const_iterator ConstWindowIterator;
@@ -23,6 +23,12 @@ public:
 	WindowSizeType Size();
 	WindowIterator Begin();
 	WindowIterator End();
+
+	virtual double Get(size_t p);
+	virtual void Set(size_t p, double value);
+
+	void Push(double value);
+	void Pop();
 
 	int Init(size_t size);
 
