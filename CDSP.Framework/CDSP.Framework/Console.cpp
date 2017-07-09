@@ -10,13 +10,18 @@
 int main()
 {
 	Window w = Window();
+	Window h = Window();
 	w.Triangular(16);
+	h.BlackmanHarris(16);
+
+	BaseFrame a = w + h;
+
 
 	IFrame im = IFrame();
 
-	for (size_t i = 0; i < im.Size(); i++)
+	for (size_t i = 0; i < a.Size(); i++)
 	{
-		cout << w.Get(i) << endl;
+		cout << a.Get(i) << endl;
 	}
 	system("pause");
     return 0;

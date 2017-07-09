@@ -51,7 +51,7 @@ int BaseFrame::Init(size_t size) {
 		this->samples.resize(size);
 		for (size_t i = 0; i < size; ++i)
 		{
-			this->samples[i] = 0;
+			this->samples.push_back(0);
 		}
 
 		return 0;
@@ -62,47 +62,39 @@ int BaseFrame::Init(size_t size) {
 	}
 }
 
-BaseFrame BaseFrame::operator+(const BaseFrame& f) {
+BaseFrame BaseFrame::operator + (BaseFrame const &a) {
 	BaseFrame out;
-	for (size_t i = 0; i < this->samples.size; i++)
+	for (size_t i = 0; i < samples.size(); i++)
 	{
-		out.samples.push_back(this->samples.at(i) + f.samples.at(i));
+		out.samples.push_back(samples[i] + a.samples[i]);
 	}
 	return out;
 }
 
-BaseFrame BaseFrame::operator+(const BaseFrame& f) {
+BaseFrame BaseFrame::operator - (BaseFrame const &a) {
 	BaseFrame out;
-	for (size_t i = 0; i < this->samples.size; i++)
+	for (size_t i = 0; i < samples.size(); i++)
 	{
-		out.samples.push_back(this->samples.at(i) + f.samples.at(i));
+		out.samples.push_back(samples[i] - a.samples[i]);
 	}
 	return out;
 }
 
-BaseFrame BaseFrame::operator-(const BaseFrame& f) {
+BaseFrame BaseFrame::operator * (BaseFrame const &a) {
 	BaseFrame out;
-	for (size_t i = 0; i < this->samples.size; i++)
+	for (size_t i = 0; i < samples.size(); i++)
 	{
-		out.samples.push_back(this->samples.at(i) - f.samples.at(i));
+		out.samples.push_back(samples[i] * a.samples[i]);
 	}
 	return out;
 }
 
-BaseFrame BaseFrame::operator*(const BaseFrame& f) {
+BaseFrame BaseFrame::operator / (BaseFrame const &a) {
 	BaseFrame out;
-	for (size_t i = 0; i < this->samples.size; i++)
+	for (size_t i = 0; i < samples.size(); i++)
 	{
-		out.samples.push_back(this->samples.at(i) * f.samples.at(i));
+		out.samples.push_back(samples[i] / a.samples[i]);
 	}
 	return out;
 }
 
-BaseFrame BaseFrame::operator/(const BaseFrame& f) {
-	BaseFrame out;
-	for (size_t i = 0; i < this->samples.size; i++)
-	{
-		out.samples.push_back(this->samples.at(i) / f.samples.at(i));
-	}
-	return out;
-}
