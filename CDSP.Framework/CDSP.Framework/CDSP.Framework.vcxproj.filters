@@ -36,8 +36,8 @@
     <ClInclude Include="BaseFrame.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
-    <ClInclude Include="IFrame.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="ComplexFrame.h">
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -53,8 +53,8 @@
     <ClCompile Include="BaseFrame.cpp">
       <Filter>Source Files\Core</Filter>
     </ClCompile>
-    <ClCompile Include="IFrame.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ComplexFrame.cpp">
+      <Filter>Source Files\Core</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

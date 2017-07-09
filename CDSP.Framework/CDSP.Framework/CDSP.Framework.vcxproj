@@ -139,7 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseFrame.h" />
-    <ClInclude Include="IFrame.h" />
+    <ClInclude Include="ComplexFrame.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Window.h" />
@@ -147,7 +147,7 @@
   <ItemGroup>
     <ClCompile Include="BaseFrame.cpp" />
     <ClCompile Include="Console.cpp" />
-    <ClCompile Include="IFrame.cpp" />
+    <ClCompile Include="ComplexFrame.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

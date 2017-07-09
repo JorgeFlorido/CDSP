@@ -4,7 +4,7 @@
 #include <cstdlib>
 #include "BaseFrame.h"
 
-class IFrame : public BaseFrame
+class ComplexFrame : public BaseFrame
 {
 public:
 
