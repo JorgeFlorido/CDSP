@@ -62,4 +62,47 @@ int BaseFrame::Init(size_t size) {
 	}
 }
 
+BaseFrame BaseFrame::operator+(const BaseFrame& f) {
+	BaseFrame out;
+	for (size_t i = 0; i < this->samples.size; i++)
+	{
+		out.samples.push_back(this->samples.at(i) + f.samples.at(i));
+	}
+	return out;
+}
 
+BaseFrame BaseFrame::operator+(const BaseFrame& f) {
+	BaseFrame out;
+	for (size_t i = 0; i < this->samples.size; i++)
+	{
+		out.samples.push_back(this->samples.at(i) + f.samples.at(i));
+	}
+	return out;
+}
+
+BaseFrame BaseFrame::operator-(const BaseFrame& f) {
+	BaseFrame out;
+	for (size_t i = 0; i < this->samples.size; i++)
+	{
+		out.samples.push_back(this->samples.at(i) - f.samples.at(i));
+	}
+	return out;
+}
+
+BaseFrame BaseFrame::operator*(const BaseFrame& f) {
+	BaseFrame out;
+	for (size_t i = 0; i < this->samples.size; i++)
+	{
+		out.samples.push_back(this->samples.at(i) * f.samples.at(i));
+	}
+	return out;
+}
+
+BaseFrame BaseFrame::operator/(const BaseFrame& f) {
+	BaseFrame out;
+	for (size_t i = 0; i < this->samples.size; i++)
+	{
+		out.samples.push_back(this->samples.at(i) / f.samples.at(i));
+	}
+	return out;
+}

@@ -32,6 +32,11 @@ public:
 
 	int Init(size_t size);
 
+	BaseFrame BaseFrame::operator+(const BaseFrame& f);
+	BaseFrame BaseFrame::operator-(const BaseFrame& f);
+	BaseFrame BaseFrame::operator*(const BaseFrame& f);
+	BaseFrame BaseFrame::operator/(const BaseFrame& f);
+
 protected:
 	Container samples;
 };
