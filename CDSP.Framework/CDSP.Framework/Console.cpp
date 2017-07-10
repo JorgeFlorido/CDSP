@@ -3,25 +3,18 @@
 
 #include "stdafx.h"
 #include "Window.h"
-#include "IFrame.h"
+#include "ComplexFrame.h"
 #include <iostream>
 
 
 int main()
 {
-	Window w = Window();
-	Window h = Window();
-	w.Triangular(16);
-	h.BlackmanHarris(16);
 
-	BaseFrame a = w + h;
+	ComplexFrame im = ComplexFrame();
 
-
-	IFrame im = IFrame();
-
-	for (size_t i = 0; i < a.Size(); i++)
+	for (size_t i = 0; i < 16; i++)
 	{
-		cout << a.Get(i) << endl;
+		im.Push(1, 1);
 	}
 	system("pause");
     return 0;

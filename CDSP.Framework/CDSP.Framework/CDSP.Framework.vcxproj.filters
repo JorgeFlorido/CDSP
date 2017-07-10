@@ -39,6 +39,9 @@
     <ClInclude Include="ComplexFrame.h">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
+    <ClInclude Include="Complex.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -54,6 +57,9 @@
       <Filter>Source Files\Core</Filter>
     </ClCompile>
     <ClCompile Include="ComplexFrame.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Complex.cpp">
       <Filter>Source Files\Core</Filter>
     </ClCompile>
   </ItemGroup>
